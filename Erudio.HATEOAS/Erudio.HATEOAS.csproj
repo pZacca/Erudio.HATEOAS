@@ -10,7 +10,7 @@
 		<RepositoryUrl>https://github.com/leandrocgsi/Erudio.HATEOAS/</RepositoryUrl>
 		<PackageTags>HATEOAS</PackageTags>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-		<Version>8.0.101.1</Version>
+		<Version>8.0.101.2</Version>
 	</PropertyGroup>
 
 	<ItemGroup>
