@@ -11,10 +11,14 @@
 		<PackageTags>HATEOAS</PackageTags>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 		<Version>8.0.101.2</Version>
+		<PackageIcon>erudio-hateoas-128x128.png</PackageIcon>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
 	</PropertyGroup>
 
 	<ItemGroup>
 		<FrameworkReference Include="Microsoft.AspNetCore.App" />
+		<None Include="docs\README.md" Pack="true" PackagePath="\" />
+		<None Include="icons\erudio-hateoas-128x128.png" Pack="true" PackagePath="\" />
 	</ItemGroup>
 
 </Project>

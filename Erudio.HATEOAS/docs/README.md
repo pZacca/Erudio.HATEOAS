@@ -20,7 +20,7 @@ Install-Package Erudio.HATEOAS -Version 1.0.15
 
 #### Import with nuget package manager
 
-![Nuget Package Mannager](https://github.com/leandrocgsi/Erudio.HATEOAS/blob/main/images/nuget_package_mannager.png?raw=true)
+![Nuget Package Manager](https://github.com/leandrocgsi/Erudio.HATEOAS/blob/main/images/nuget_package_mannager.png?raw=true)
 
 >### 2 - Implements *ISupportsHyperMedia* in your exposed object.
 
