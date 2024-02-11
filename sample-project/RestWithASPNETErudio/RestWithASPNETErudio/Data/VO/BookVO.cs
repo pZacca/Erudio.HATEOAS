@@ -1,5 +1,5 @@
-﻿using RestWithASPNETErudio.Hypermedia;
-using RestWithASPNETErudio.Hypermedia.Abstract;
+﻿using Erudio.HATEOAS.Hypermedia;
+using Erudio.HATEOAS.Hypermedia.Abstract;
 
 namespace RestWithASPNETErudio.Data.VO
 {

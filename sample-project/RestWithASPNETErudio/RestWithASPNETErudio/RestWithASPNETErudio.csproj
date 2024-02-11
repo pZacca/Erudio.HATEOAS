@@ -9,6 +9,7 @@
   </PropertyGroup>
 
 	<ItemGroup>
+		<PackageReference Include="Erudio.HATEOAS" Version="8.0.101.3" />
 		<PackageReference Include="Evolve" Version="3.2.0" />
 		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.0" />
 		<PackageReference Include="Asp.Versioning.Mvc" Version="7.1.0" />

@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using RestWithASPNETErudio.Data.VO;
-using RestWithASPNETErudio.Hypermedia.Constants;
+using Erudio.HATEOAS.Hypermedia.Constants;
 using System.Text;
 
-namespace RestWithASPNETErudio.Hypermedia.Enricher
+namespace Erudio.HATEOAS.Hypermedia.Enricher
 {
     public class PersonEnricher : ContentResponseEnricher<PersonVO>
     {

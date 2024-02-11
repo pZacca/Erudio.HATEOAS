@@ -1,5 +1,5 @@
 ﻿using RestWithASPNETErudio.Data.VO;
-using RestWithASPNETErudio.Hypermedia.Utils;
+using Erudio.HATEOAS.Hypermedia.Utils;
 
 namespace RestWithASPNETErudio.Business
 {
