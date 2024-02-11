@@ -15,7 +15,7 @@ This is a smart library to implements HATEOAS pattern in your RESTFul API's, imp
 >### 1 - Import Erudio.HATEOAS to your projetct
 #### Import with command line
 ```bash
-Install-Package Erudio.HATEOAS -Version 1.0.15
+Install-Package Erudio.HATEOAS -Version 8.0.101.5
 ```
 
 #### Import with nuget package manager
