@@ -50,40 +50,41 @@ namespace RESTFulSampleServer.HyperMedia.Enricher
         protected override Task EnrichModel(BookVO content, IUrlHelper urlHelper)
         {
             var path = "api/book";
-            string link = GetLink(content.Id, urlHelper, path);
+            string linkWithId = GetLink(content.Id, urlHelper, path);
+            string linkWithoutId = GetLink(null, urlHelper, path);
 
             content.Links.Add(new HyperMediaLink()
             {
                 Action = HttpActionVerb.GET,
-                Href = link,
+                Href = linkWithId,
                 Rel = RelationType.self,
                 Type = ResponseTypeFormat.DefaultGet
             });
             content.Links.Add(new HyperMediaLink()
             {
                 Action = HttpActionVerb.POST,
-                Href = link,
+                Href = linkWithoutId,
                 Rel = RelationType.self,
                 Type = ResponseTypeFormat.DefaultPost
             });
             content.Links.Add(new HyperMediaLink()
             {
                 Action = HttpActionVerb.PUT,
-                Href = link,
+                Href = linkWithoutId,
                 Rel = RelationType.self,
                 Type = ResponseTypeFormat.DefaultPut
             });
             content.Links.Add(new HyperMediaLink()
             {
                 Action = HttpActionVerb.DELETE,
-                Href = link,
+                Href = linkWithId,
                 Rel = RelationType.self,
                 Type = "int"
             });
             return Task.CompletedTask;
         }
 
-        private string GetLink(long id, IUrlHelper urlHelper, string path)
+        private string GetLink(long? id, IUrlHelper urlHelper, string path)
         {
             lock (this)
             {
@@ -223,13 +224,13 @@ namespace RESTFulSampleServer.Controllers
             },
             {
                 "rel": "self",
-                "href": "https://localhost:44300/api/book/v1/1",
+                "href": "https://localhost:44300/api/book/v1",
                 "type": "application/json",
                 "action": "POST"
             },
             {
                 "rel": "self",
-                "href": "https://localhost:44300/api/book/v1/1",
+                "href": "https://localhost:44300/api/book/v1",
                 "type": "application/json",
                 "action": "PUT"
             },
@@ -256,13 +257,13 @@ namespace RESTFulSampleServer.Controllers
             },
             {
                 "rel": "self",
-                "href": "https://localhost:44300/api/book/v1/2",
+                "href": "https://localhost:44300/api/book/v1",
                 "type": "application/json",
                 "action": "POST"
             },
             {
                 "rel": "self",
-                "href": "https://localhost:44300/api/book/v1/2",
+                "href": "https://localhost:44300/api/book/v1",
                 "type": "application/json",
                 "action": "PUT"
             },
@@ -296,13 +297,13 @@ namespace RESTFulSampleServer.Controllers
             </HyperMediaLink>
             <HyperMediaLink>
                 <Rel>self</Rel>
-                <Href>https://localhost:44300/api/book/v1/1</Href>
+                <Href>https://localhost:44300/api/book/v1</Href>
                 <Type>application/json</Type>
                 <Action>POST</Action>
             </HyperMediaLink>
             <HyperMediaLink>
                 <Rel>self</Rel>
-                <Href>https://localhost:44300/api/book/v1/1</Href>
+                <Href>https://localhost:44300/api/book/v1</Href>
                 <Type>application/json</Type>
                 <Action>PUT</Action>
             </HyperMediaLink>
@@ -329,13 +330,13 @@ namespace RESTFulSampleServer.Controllers
             </HyperMediaLink>
             <HyperMediaLink>
                 <Rel>self</Rel>
-                <Href>https://localhost:44300/api/book/v1/2</Href>
+                <Href>https://localhost:44300/api/book/v1</Href>
                 <Type>application/json</Type>
                 <Action>POST</Action>
             </HyperMediaLink>
             <HyperMediaLink>
                 <Rel>self</Rel>
-                <Href>https://localhost:44300/api/book/v1/2</Href>
+                <Href>https://localhost:44300/api/book/v1</Href>
                 <Type>application/json</Type>
                 <Action>PUT</Action>
             </HyperMediaLink>
